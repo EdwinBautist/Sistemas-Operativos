@@ -4,19 +4,15 @@ int main()
 
 {
     char ejecutar[20];
-
+ 
     printf("Ingresa una opción:\n");
-    printf("ejecutar nombre_archivo.asm\n");
-    printf("salir\n");
-    fgets(ejecutar, sizeof(ejecutar))
-    while (opcion != "salir"){
+    printf("\nejecutar nombre_archivo.asm\n");
+    printf("\nsalir\n");
+    fgets(ejecutar, sizeof(ejecutar), stdin);
 
 
 
-    printf("Ingresa una opción:\n");
-    printf("ejecutar nombre_archivo.asm\n");
-    printf("salir\n"); 
-    }
-    printf("Saliendo...\n"); 
+    printf("%s\n", ejecutar);
+    
     return 0;
 }
