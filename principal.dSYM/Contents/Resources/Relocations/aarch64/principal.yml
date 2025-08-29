@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/elenagabriel/Documents/Semestre_25-26/Lab_SO/MODULO 1/Sistemas-Operativos/principal'
+relocations:     []
+...
