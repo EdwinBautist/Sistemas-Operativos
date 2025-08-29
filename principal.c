@@ -1,9 +1,18 @@
 #include<stdio.h>
 
 int main()
+
 {
-    printf("Hola Sistemas Operativos");
-    printf("Prueba Commit");
-    printf("Prueba Elena");
+    char ejecutar[20];
+ 
+    printf("Ingresa una opción:\n");
+    printf("\nejecutar nombre_archivo.asm\n");
+    printf("\nsalir\n");
+    fgets(ejecutar, sizeof(ejecutar), stdin);
+
+
+
+    printf("%s\n", ejecutar);
+    
     return 0;
-}
+}   
