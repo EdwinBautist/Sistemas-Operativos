@@ -1,0 +1,2 @@
+MOV Ax, 4
+ADD, Bx
