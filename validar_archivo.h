@@ -62,8 +62,8 @@ void validar_archivo(const char *nombre_archivo) {
             }
 
             *coma = '\0'; // ya parto ese token en dos, si hay coma lo separo en registro y valor
-            char *registro = segundo_parte_en_linea;
-            char *valor = coma + 1; // avanza enla coma que ahora es \0 y apunta a valor
+            int *registro = segundo_parte_en_linea;
+            int *valor = coma + 1; // avanza enla coma que ahora es \0 y apunta a valor
 
             if (!(strcmp(registro, "Ax") == 0 || strcmp(registro, "Bx") == 0 || strcmp(registro, "Cx") == 0 || strcmp(registro, "Dx") == 0)) {
                 printf("Error en línea %d: Registro inválido %s\n", numero_linea, registro);

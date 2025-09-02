@@ -8,7 +8,7 @@
 
 int interprete(char texto[50]);
 
-int interprete(char texto[50]){
+int interprete(char texto|){
     char *delimitador = " \n";
     char *token;
     char texto[50];
