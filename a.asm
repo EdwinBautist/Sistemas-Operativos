@@ -1,2 +1,4 @@
-MOV Ax, 4
-ADD, Bx
+MOV Ax,4
+
+ADD Bx,e
+INC Bx

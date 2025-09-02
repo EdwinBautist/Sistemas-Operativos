@@ -10,15 +10,14 @@ int main(){
     char *token;
     char nombre_archivo[20];
 
-
-
-
-
 do{
     printf("Ingresa una opcion: ");
     printf("ejecutar nombre_proceso.asm\n");
     printf("$ ");
     fgets(texto, sizeof(texto), stdin);
+    // Eliminar el carácter de salto de línea que agrega fgets
+    texto[strcspn(texto, "\n")] = 0;
+
     strcpy(copia_texto, texto);
 
 if (strcmp(texto, "ejecutar a.asm\n")==0){
@@ -28,10 +27,10 @@ if (strcmp(texto, "ejecutar a.asm\n")==0){
 
     while (token != NULL) { //hace el despliegue de los tokens
  
-        /*if (token == "a.asm")
-        {
-            printf("%s\n", token);
-        }*/
+    if (strcmp(token, "a.asm") == 0) {
+        printf("Token reconocido: %s\n", token);
+    }
+
         printf("%s\n", token);
         printf("%c\n", *token);
 

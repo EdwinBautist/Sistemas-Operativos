@@ -16,7 +16,7 @@ void validar_archivo(const char *nombre_archivo) {
         numero_linea++;
 
         // eliminar salto de línea al final
-        linea[strcspn(linea, "\r\n")] = '\0';
+        linea[strcspn(linea, "\n")] = '\0';
 
         // primer token = operación
         char *token_operacion = strtok(linea, " ");
@@ -53,7 +53,7 @@ void validar_archivo(const char *nombre_archivo) {
             printf("Línea %d válida: %s %s\n", numero_linea, token_operacion, segundo_parte_en_linea);
             linea_correcta++;
         } else if (es_tipo_1) {
-            // Debe ser del tipo "Rx,valor" sin espacios
+            // Debe ser del tipo Ax,valor sin espacios
             char *coma = strchr(segundo_parte_en_linea, ','); // Encuentra una coma 
             if (!coma) { // si no hya coma
                 printf("Error en línea %d: Falta coma entre registro y valor\n", numero_linea);
@@ -70,7 +70,7 @@ void validar_archivo(const char *nombre_archivo) {
                 hay_error = 1;
                 continue;
             }
-// aqui deberia validar que sea un numero afuerzas, porque si no meto nada 
+        // aqui deberia validar que sea un numero afuerzas, porque si no meto nada 
             printf("Línea %d válida: %s %s,%s\n", numero_linea, token_operacion, registro, valor);
             linea_correcta++;
         }
